@@ -1,13 +1,12 @@
 plugins {
-    id 'org.jetbrains.kotlin.multiplatform' version '1.3.61'
+    id("org.jetbrains.kotlin.multiplatform") version "1.3.61"
+    `maven-publish`
 }
 repositories {
     mavenCentral()
 }
-group 'com.example'
-version '0.0.1'
-
-apply plugin: 'maven-publish'
+group = "com.github.kubode.sandbox.kotlinmapp.library"
+version = "0.0.1"
 
 kotlin {
     jvm()
@@ -25,39 +24,39 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation kotlin('stdlib-common')
+                implementation(kotlin("stdlib-common"))
             }
         }
         commonTest {
             dependencies {
-                implementation kotlin('test-common')
-                implementation kotlin('test-annotations-common')
+                implementation(kotlin("test-common"))
+                implementation(kotlin("test-annotations-common"))
             }
         }
-        jvmMain {
+        named("jvmMain") {
             dependencies {
-                implementation kotlin('stdlib-jdk8')
+                implementation(kotlin("stdlib-jdk8"))
             }
         }
-        jvmTest {
+        named("jvmTest") {
             dependencies {
-                implementation kotlin('test')
-                implementation kotlin('test-junit')
+                implementation(kotlin("test"))
+                implementation(kotlin("test-junit"))
             }
         }
-        jsMain {
+        named("jsMain") {
             dependencies {
-                implementation kotlin('stdlib-js')
+                implementation(kotlin("stdlib-js"))
             }
         }
-        jsTest {
+        named("jsTest") {
             dependencies {
-                implementation kotlin('test-js')
+                implementation(kotlin("test-js"))
             }
         }
-        macosMain {
+        named("macosMain") {
         }
-        macosTest {
+        named("macosTest") {
         }
     }
 }
