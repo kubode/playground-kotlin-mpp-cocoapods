@@ -1,5 +1,6 @@
 plugins {
     id("org.jetbrains.kotlin.multiplatform") version "1.3.61"
+    id("org.jetbrains.kotlin.native.cocoapods") version "1.3.61"
     `maven-publish`
 }
 repositories {
@@ -20,7 +21,13 @@ kotlin {
     // For Linux, should be changed to e.g. linuxX64
     // For MacOS, should be changed to e.g. macosX64
     // For Windows, should be changed to e.g. mingwX64
-    macosX64("macos")
+    macosX64("macos") {
+        binaries {
+            framework {
+                baseName = "sandbox-kotlin-mpp-library"
+            }
+        }
+    }
     sourceSets {
         commonMain {
             dependencies {
@@ -58,5 +65,10 @@ kotlin {
         }
         named("macosTest") {
         }
+    }
+    cocoapods {
+        // Configure fields required by CocoaPods.
+        summary = "Some description for a Kotlin/Native module"
+        homepage = "Link to a Kotlin/Native module homepage"
     }
 }
