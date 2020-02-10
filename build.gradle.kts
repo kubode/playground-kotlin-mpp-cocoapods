@@ -21,13 +21,7 @@ kotlin {
     // For Linux, should be changed to e.g. linuxX64
     // For MacOS, should be changed to e.g. macosX64
     // For Windows, should be changed to e.g. mingwX64
-    macosX64("macos") {
-        binaries {
-            framework {
-                baseName = "sandbox-kotlin-mpp-library"
-            }
-        }
-    }
+    iosArm64()
     sourceSets {
         commonMain {
             dependencies {
@@ -60,10 +54,6 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-js"))
             }
-        }
-        named("macosMain") {
-        }
-        named("macosTest") {
         }
     }
     cocoapods {
