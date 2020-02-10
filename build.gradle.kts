@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 group = "com.github.kubode.sandbox.kotlinmapp.library"
-version = "0.0.6"
+version = "0.0.7"
 
 kotlin {
     jvm()
@@ -22,6 +22,8 @@ kotlin {
     // For MacOS, should be changed to e.g. macosX64
     // For Windows, should be changed to e.g. mingwX64
     iosArm64()
+    iosArm32()
+    iosX64()
     sourceSets {
         commonMain {
             dependencies {
