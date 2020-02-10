@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 group = "com.github.kubode.sandbox.kotlinmapp.library"
-version = "0.0.5"
+version = "0.0.6"
 
 kotlin {
     jvm()
