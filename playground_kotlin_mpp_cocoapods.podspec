@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
     spec.name                     = 'playground_kotlin_mpp_cocoapods'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'Link to a Kotlin/Native module homepage'
-    spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
+    spec.source                   = { :git => "https://github.com/kubode/playground-kotlin-mpp-cocoapods.git", :tag => "#{spec.version}" }
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Some description for a Kotlin/Native module'
