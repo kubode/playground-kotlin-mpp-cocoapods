@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'playground_kotlin_mpp_cocoapods'
-    spec.version                  = '0.0.2'
+    spec.version                  = '0.0.3'
     spec.homepage                 = 'Link to a Kotlin/Native module homepage'
     spec.source                   = { :git => "https://github.com/kubode/playground-kotlin-mpp-cocoapods.git", :tag => "#{spec.version}" }
-    spec.authors                  = ''
-    spec.license                  = ''
+    spec.authors                  = 'kubode'
+    spec.license                  = 'MIT'
     spec.summary                  = 'Some description for a Kotlin/Native module'
 
     spec.static_framework         = true
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
-
+            
 
     spec.pod_target_xcconfig = {
         'KOTLIN_TARGET[sdk=iphonesimulator*]' => 'ios_x64',

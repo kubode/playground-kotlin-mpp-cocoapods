@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 group = "com.github.kubode.sandbox.kotlinmapp.library"
-version = "0.0.2"
+version = "0.0.3"
 
 kotlin {
     jvm()
@@ -60,5 +60,7 @@ kotlin {
         // Configure fields required by CocoaPods.
         summary = "Some description for a Kotlin/Native module"
         homepage = "Link to a Kotlin/Native module homepage"
+        license = "MIT"
+        authors = "kubode"
     }
 }
